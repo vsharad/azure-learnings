@@ -1,0 +1,17 @@
+Implement message-based communication workflows with Azure Service Bus 
+
+Choose a messaging platform
+Decide between messages and events
+Messages and events are both datagrams: packages of data sent from one component to another. 
+
+Messages
+
+In the terminology of distributed applications, the defining characteristic of a message is that the overall integrity of the application may rely on messages being received. You can think of sending a message as one component passing the baton of a workflow to a different component. The entire workflow may be a vital business process, and the message is the mortar that holds the components together.
+
+A message generally contains the data itself, not just a reference (like an ID or URL) to data. Sending the data as part of the datagram is less brittle than sending a reference. The messaging architecture guarantees delivery of the message, and because no additional lookups are required, the message is reliably handled. However, the sending application needs to know exactly what data to include to avoid sending too much data, which requires the receiving component to do unnecessary work. In this sense, the sender and receiver of a message are often coupled by a strict data contract.
+
+Events
+
+An event triggers a notification that something has occurred. Events are "lighter" than messages and are most often used for broadcast communications.
+
+
