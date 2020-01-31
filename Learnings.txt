@@ -14,4 +14,11 @@ Events
 
 An event triggers a notification that something has occurred. Events are "lighter" than messages and are most often used for broadcast communications.
 
+Events have the following characteristics:
+
+    The event may be sent to multiple receivers, or to none at all
+    Events are often intended to "fan out," or have a large number of subscribers for each publisher
+    The publisher of the event has no expectation about the action a receiving component takes
+
+
 
